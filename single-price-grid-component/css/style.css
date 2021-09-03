@@ -1,0 +1,151 @@
+
+/**************  General Styles *************/
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --light-cyan: hsl(178, 48%, 52%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+    --gray: hsl(0, 0%, 95%);
+    --white: #fff;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--gray);
+    color: var(--white);
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    background-color: var(--white);
+    margin: 3em auto;
+    width: 375px;
+}
+section {
+    padding: 2rem;
+}
+
+/**************  Hero Styles *************/
+
+.heading {
+   color: var(--cyan); 
+   font-size: 1.25rem;
+   margin-bottom: 1.5rem;
+   
+}
+
+h2 {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+.guarantee {
+    color: var(--bright-yellow);
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+.description {
+    color: var(--grayish-blue);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+/**************  Subscription Styles *************/ 
+.subscription-info {
+    background-color: var(--cyan);
+    color: var(--light-gray);
+}
+
+.price {
+    margin-bottom: 0.5em;
+}
+
+.price span {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.service-info {
+    margin-bottom: 1.625em;
+}
+
+button {
+    display: block;
+    width: 100%;
+    background-color: var(--bright-yellow);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 3px 3px 15px #999;
+    color: var(--white);
+    font-weight: 700;
+    padding: 1rem 0;
+}
+
+/**************  Features Styles *************/
+.features {
+    background-color: var(--light-cyan);
+    color: var(--light-gray);
+}
+
+li {
+    font-size: 0.875em;
+    line-height: 1.6;
+    list-style: none;
+}
+
+/**************  Attribution Styles *************/
+.attribution {
+    color: var(--cyan);
+    font-size: 11px; text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+      @media (min-width: 800px) {
+        /**************  General Styles *************/
+        .container {
+            border-radius: 7px;
+            box-shadow: 3px 3px 15px #999;
+            margin: 5rem auto;
+            overflow: hidden;
+            width: 40rem;
+        }
+
+        .subscription-info,
+        .features {
+            width: 50%;
+        }
+
+        /**************  Hero Styles *************/
+        .heading {
+            font-size: 1.5rem;
+        }
+
+        .guarantee {
+          font-size: 1.125rem;  
+        }
+ 
+        .product-info {
+            display: flex;
+        }
+
+        .product-heading {
+            font-size: 1rem;
+        }
+
+        
+      }
+  
+      
