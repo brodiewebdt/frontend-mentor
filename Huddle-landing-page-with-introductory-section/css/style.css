@@ -1,0 +1,170 @@
+
+html {
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: var(--violet);
+    background-image: url("../images/bg-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+}
+
+.container {
+    width: 375px;
+    margin: 5% auto;
+    padding: 2em;
+}
+
+header {
+    margin-bottom: 4em;
+}
+
+.logo {
+    width: 50%;
+    margin: 0;
+}
+
+.card-img {
+    margin-bottom: 4em;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Typography */
+.text-content {
+    text-align: center;
+}
+
+h1 {
+    margin: 0 0 1em;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-bottom: 1.33em;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 50px;
+    font-size: 1rem;
+    margin-bottom: 4em;
+    padding: 1em 7em;
+    text-decoration: none;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, .25) ;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--soft-magenta);
+    color: #fff;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.social-link {
+    display: inline-block;
+    color: #fff;
+    margin: 0 1em;
+}
+
+.social-link:hover,
+.social-link:focus {
+    color: var(--soft-magenta);
+}
+
+i.fab {
+    background: transparent;
+    color: var(--white);
+    font-size: 1rem;
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 60px;
+    box-shadow: 0px 0px 2px #888;
+    padding: 0.5em 0.6em;
+  
+  }
+
+.attribution {
+    font-size: 11px; text-align: center;
+}
+
+.attribution a {
+    color: #fff;
+}
+
+
+
+
+@media (min-width: 1000px) {
+    body {
+        background-image: url("../images/bg-desktop.svg");
+
+    }
+    .container {
+        width: 1000px;
+        margin: 5% auto;
+        
+    }
+
+    .card-body {
+        display: flex;
+        gap: 3em;
+    }
+
+    .logo {
+        width: 20%;
+        margin: 2em 0;
+    }
+
+    .card-img,
+    .card-text {
+       flex-basis: 50%; 
+    }
+
+    .btn {
+        padding: 1em 4em;
+    }
+
+    /* Typography */
+    .text-content {
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    ul {
+        justify-content: flex-end;
+    }
+}
