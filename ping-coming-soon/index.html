@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <title>Frontend Mentor | Ping coming soon page</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,600,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="container" role="main">
+
+
+    <img src="images/logo.svg" alt="logo" class="logo">
+    
+    <h1><span class="accent-text">We are launching</span> soon!</h1>
+    <p class="subhead">Subscribe and get notified</p><!-- /.subhead -->
+    
+
+    <form action="" name="notifyForm" onclick="validateForm()">
+      
+      <div class="input-holder">
+        <input type="email" name="email" id="email" placeholder="Your email address...">
+      <p id="errorMessage"></p><!-- /.error-message -->
+      </div><!-- /.input-holder -->
+            
+      <button id="btn-submit" type="submit">Notify Me</button>
+      
+    </form>
+
+    <img class="dashboard-image" src="images/illustration-dashboard.png" alt="admin dashboard">
+  <ul class="social-links">
+    <li ><a class="link-item" href="www.facebook.com"><i class="fa fa-facebook circle-icon"></i></a></li>
+    <li><a class="link-item" href="www.twitter.com"><i class="fa fa-twitter circle-icon"></i></a></li>
+    <li><a class="link-item" href="www.instagram.com"><i class="fa fa-instagram circle-icon"></i></a></li>
+  </ul>
+
+  <div class="copyright">&copy; Copyright Ping. All rights reserved.</div><!-- /.copyright -->
+    
+  </div><!-- /.container -->
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">David Turner</a>.
+    </p>
+  </footer>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
