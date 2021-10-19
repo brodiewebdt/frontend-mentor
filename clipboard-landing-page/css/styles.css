@@ -1,0 +1,272 @@
+:root {
+    /* Primary Colors */
+    --strong-cyan: hsl(171, 66%, 44%);
+    --light-blue: hsl(233, 100%, 69%);
+    /* Neutral Colors */
+    --dark-grayish-blue: hsl(210, 10%, 33%);
+    --grayish-blue: hsl(180, 11%, 96%);
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image: url(../images/bg-header-desktop.png);
+    background-repeat: no-repeat;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .container {
+    margin: 0 auto;
+    max-width: 1110px;
+    width: 90%;
+  }
+
+  .container-sm {
+    margin: 0 auto;
+    max-width: 730px;
+    width: 80%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .btn-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btn {
+    border: none;
+    border-radius: 3em;
+    box-shadow: inset 0 -3px rgba(0, 0, 0, .15);
+    color: var(--grayish-blue);
+    font-family: inherit;
+    font-size: 1.125rem;
+    padding: 1em;
+  }
+
+  .btn-primary {
+    background-color: var(--strong-cyan);
+    margin-bottom: 1.5em;
+  }
+
+  .btn-secondary {
+    background-color: var(--light-blue);
+  }
+
+
+  /**************** Typography ***************/
+  h1,
+  h2,
+  h3,
+  .btn {
+    font-weight: 600;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: .5em;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    margin-bottom: .58em;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin: 1.67em 0 .4em;
+  }
+
+  p {
+    margin-bottom: 3em;
+  }
+
+  .workflow-head p {
+    margin-bottom: 5.625em;
+  }
+
+  .card p {
+    margin-bottom: 3.5em;
+  }
+
+  a {
+    color: var(--dark-grayish-blue);
+    text-decoration: none;
+  }
+
+  i {
+    font-size: 1.5rem;
+  }
+
+  /**************** Header Styles ***************/
+  .header {
+    padding: 7em 0 10em;
+  }
+
+  .main-logo {
+    margin-bottom: 4em;
+  }
+
+
+  /**************** Snippets Styles ***************/
+
+
+
+  /**************** Access Styles ***************/
+  .access {
+    margin: 8.626em auto 8.125em;
+  }
+
+
+  /**************** Workflow Styles ***************/
+  .card {
+    padding: 0 3em;
+  }
+
+
+  /**************** Company Logos Styles ***************/
+  .company-logos {
+    padding: 5.375em 0 6.25em;
+  }
+
+  .logo-block {
+    margin-bottom: 3.75em;
+  }
+
+
+  /**************** CTA Styles ***************/
+  .cta {
+    margin-bottom: 10.625em;
+  }
+
+
+  /**************** Footer Styles ***************/
+  .footer {
+    background-color: var(--grayish-blue);
+    padding: 3.25em 0;
+  }
+
+  .footer-logo {
+    height: 45px;
+    margin: 0 auto;
+    width: 45px;
+  }
+
+  .footer-links {
+    padding: 3em 0 1.75em;
+  }
+
+  .footer-links li {
+    margin-bottom: 1.25em;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+  }
+
+  .social-links li {
+    margin: 0 1.25em;
+  }
+
+  /**************** Attribution ***************/
+  .attribution {
+    font-size: 11px;
+    margin-top: 3em;
+    text-align: center;
+  }
+
+  .attribution a { color: hsl(228, 45%, 44%); }
+
+
+  /**************** Media Queries ***************/
+  @media (min-width: 600px) {
+    .btn-block {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .btn {
+      margin: 0 .5em;
+      padding: 1em 2em;
+    }
+
+    .btn-primary {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .flex {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h3.blacklist {
+      margin-top: 1.25em;
+    }
+
+    .workflow-head p {
+      margin-bottom: 4.5em;
+    }
+
+    .card {
+      align-self: flex-start;
+      width: 33.3%;
+    }
+    
+    .features-img {
+      transform: translateX(-20%);
+    }
+
+    .features-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .features-text p {
+      margin-bottom: 0;
+    }
+
+    .company-logos {
+      justify-content: space-around;
+    }
+
+    .logo-block {
+      padding: 0 1em;
+    }
+
+    .footer-logo {
+      margin: 0;
+    }
+  
+    .footer .flex {
+      justify-content: space-between;
+    }
+  
+    .footer-links {
+      display: flex;
+      padding: 0;
+    }
+  
+    .footer-links li {
+      margin: 0 1em;
+    }
+  }
+
+  
+
