@@ -1,0 +1,204 @@
+:root {
+    /* Primary Colors */
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    /* Neutral Colors */
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+html  {
+    box-sizing: border-box;
+    min-height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-image: url("../images/bg-pattern-top-mobile.svg"), url("../images/bg-pattern-bottom-mobile.svg");
+    background-position: left top, bottom right;
+    background-repeat: no-repeat;
+    background-size: 60%, 100%;
+    color: var(--very-dark-magenta);
+    font-family: 'Spartan', sans-serif;
+    font-size: .8125rem;
+    min-height: 100%;
+    padding: 5em 0 6.25em;
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1110px;
+    width: 90%;
+}
+
+.content-container {
+    margin-bottom: 3rem;
+}
+
+/************* Typography *****************/
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.125em;
+}
+
+h2 {
+    font-weight: 700;
+    margin-bottom: .3rem;
+}
+
+.subtitle {
+    color: var(--dark-grayish-magenta);
+    font-size: .9375rem;
+    font-weight: 500;
+    line-height: 1.67;
+    margin-bottom: 2.67em;
+}
+
+
+/************* Ratings Styles *****************/
+.ratings > * + *,
+.reviews > * + * {
+    margin-top: 1rem;
+}
+
+.ratings-list-item {
+    background-color: var(--light-grayish-magenta);
+    border-radius: 8px;
+    padding: 1rem;    
+}
+
+.stars img {
+    margin: 0 2px;
+}
+
+.ratings span {
+    display: inline-block;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+/************* Reviews Styles *****************/
+.reviews-list-item {
+    background-color: var(--very-dark-magenta);
+    border-radius: 8px;
+    color: var(--white);
+    line-height: 1.7;
+    padding: 2.5rem 2rem 2rem;
+    text-align: left;
+}
+
+.reviews-list-item p {
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.reviewer-meta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.625rem;
+}
+
+.reviewer-meta img {
+    border-radius: 50%;
+    height: 2.5rem;
+    margin-right: 1.5rem;
+    width: 2.5rem;
+}
+
+.reviewer-name span {
+    color: var(--soft-pink);    
+}
+
+
+.attribution {
+    font-size: 11px;
+    margin-top: 4rem;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 650px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media (min-width: 900px) {
+    body {
+        background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
+        background-size: 45%, 75%;
+        padding: 7.5rem 0;
+        text-align: left;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .content-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .content {
+        width: 40%;
+    }
+
+    .subtitle {
+        margin: 0;
+    }
+
+    .ratings-list-item {
+        display: flex;
+        align-items: center;
+        padding: 1rem 3.75rem 1rem 2rem;
+    }
+
+    .ratings-list-item:nth-child(1) {
+        transform: translateX(-100px);
+    }
+
+    .ratings-list-item:nth-child(2) {
+        transform: translateX(-50px);
+    }
+
+    .ratings-list-item span {
+        margin: 0 0 0 2rem;
+    }
+
+    .reviews {
+        display: flex;
+        margin-top: 5.5rem;
+    }
+
+    .reviews > * + * {
+        margin-top: 0;
+        margin-left: 1.875rem;
+    }
+
+    .reviews-list-item:nth-child(1)  {
+        transform: translateY(-16px);
+    }
+
+    .reviews-list-item:nth-child(3)  {
+        transform: translateY(16px);
+    }
+}
+
+@media (min-width: 1050px) {
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+}
