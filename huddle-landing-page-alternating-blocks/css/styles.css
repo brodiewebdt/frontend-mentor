@@ -198,6 +198,10 @@ h2 {
     .container {
         width: 70%;
     }
+
+    .header {
+        background-image: url(../images/bg-hero-desktop.svg);
+    }
 }
 
 @media (min-width: 900px) {
