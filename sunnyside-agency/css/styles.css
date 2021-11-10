@@ -1,7 +1,5 @@
 
-/*     font-family: 'Barlow', sans-serif;
 
-    font-family: 'Fraunces', serif; */
 
 :root {
     /* Primary Colors */
@@ -25,111 +23,173 @@
     margin: 0;
 }
 
+body {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.125rem;
+}
+
 .container {
-  width: 100%;
-  max-width: 800px;
+  max-width: 100vw;
 }
 
 img {
+  /* display: block; */
   max-width: 100%;
 }
 
-.hero {
-    background-color: bisque;
+/*********** Typography  *********/
+h1,
+h2,
+h3 {
+  font-family: 'Fraunces', serif;
 }
 
-.services {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 1fr);
-
-  width: 100%;
+h1 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 1.25em;
+  text-transform: uppercase;
+  width: 80%;
 }
 
-.block-1 {
-  grid-row: 1;
-  grid-column: 1 / -1;
-}
-
-.block-2 {
-  grid-row: 2;
-  grid-column: 1 / -1;
-}
-
-.block-3 {
-  grid-row: 3;
-  grid-column: 1 / -1;
-}
-
-.block-4 {
-  grid-row: 4;
-  grid-column: 1 / -1;
-}
-
-.block-5 {
-  grid-row: 5;
-  grid-column: 1 / -1;
-}
-
-.block-6 {
-  grid-row: 5;
-  grid-column: 1 / -1;
-}
-
-.block-7 {
-  grid-row: 6;
-  grid-column: 1 / -1;
-}
-
-.block-8 {
-  grid-row: 6;
-  grid-column: 1 / -1;
-}
 
 /*********** Navbar Styles  *********/
 nav {
-    width: 100%;
-    background-color: burlywood;
-    padding-left: 2em;
-    padding-right: 2em;
-  }
-  
-  .navbar {
+  /* width: 100%; */
+  background-color: burlywood;
+  /* padding-left: 2em; */
+  /* padding-right: 2em; */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item a {
+  display: inline-block;
+  /* padding: 1em 1em; */
+  text-decoration: none;
+  color: var(--white);
+}
+
+.nav-item:hover {
+  background-color: white;
+}
+
+.nav-item:hover a {
+  color:var(--primary);
+}
+
+.logo img {
+  /* width: 175px; */
+  vertical-align: middle;
+}
+
+/*********** Services Section  *********/
+.hero {
+    background-image: url(../images/mobile/image-header.jpg);
+    background-position: center bottom;
+    background-size: cover;
+
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-  }
+    justify-content: center;
+
+    padding: 6em 0 8em;
+    text-align: center;
+}
+
+
+
+
+/*********** Services Section  *********/
+.services {
+  text-align: center;
+
+  border: 1px solid red;
+}
   
-  .logo {
-    color: var(--white);
-    display: inline-block;
-    text-decoration: none;
-  }
+.block-1 { 
+  background-image: url(../images/mobile/image-transform.jpg);
+  background-position: center;
+  background-size: cover;
+
+  padding: 10em 0;
+}
+
+.block-2 { 
   
-  .nav-links {
-    display: flex;
-    list-style: none;
-  }
+
   
-  .nav-item a {
-    display: inline-block;
-    padding: 1em 1em;
-    text-decoration: none;
-    color: var(--white);
-  }
+}
+
+.block-3 { 
   
-  .nav-item:hover {
-    background-color: white;
-  }
+
+  background-image: url(../images/mobile/image-stand-out.jpg);
+  background-size: cover;
+  background-position: center;
+
+  padding: 10em 0;
+}
+
+.block-4 { 
   
-  .nav-item:hover a {
-    color:var(--primary);
-  }
+}
+
+.block-5 { 
   
-  .logo img {
-    /* width: 175px; */
-    vertical-align: middle;
-  }
+
+  background-image: url(../images/mobile/image-graphic-design.jpg);
+  background-position: center;
+  background-size: cover;
+
+  padding: 10em 0;
+}
+
+.block-6 { 
+  grid-area: 3 / 2 / 4 / 3;
+
+  background-image: url(../images/mobile/image-photography.jpg);
+  background-position: center;
+  background-size: cover;
+
+  padding: 10em 0;
+}
+
+.txt-services {
+  margin-top: 60%;
+  text-align: center;
+  z-index: 2;
+}
+
+.text {
+  margin: 6em 2em;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -155,7 +215,16 @@ nav {
     list-style: none;
 }
 
+/*********** Gallery Section  *********/
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: ifr 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 
+  border: 1px solid red;
+}
 
 
 
@@ -166,3 +235,82 @@ nav {
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+
+/*********** Media Queries  *********/
+  @media (min-width: 768px) {
+    /*********** Services Section  *********/
+  .services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    border: 1px solid red;
+  }
+    
+  .block-1 { 
+    /* grid-area: 1 / 1 / 2 / 2; */
+    grid-area: 1 / 2 / 2 / 3;
+    background-image: url(../images/desktop/image-transform.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .block-2 { 
+    /* grid-area: 1 / 2 / 2 / 3; */
+    grid-area: 1 / 1 / 2 / 2;
+
+    
+  }
+
+  .block-3 { 
+    grid-area: 2 / 1 / 3 / 2;
+
+    background-image: url(../images/desktop/image-stand-out.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .block-4 { 
+    grid-area: 2 / 2 / 3 / 3;
+  }
+
+  .block-5 { 
+    grid-area: 3 / 1 / 4 / 2;
+
+    background-image: url(../images/desktop/image-graphic-design.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .block-6 { 
+    grid-area: 3 / 2 / 4 / 3;
+
+    background-image: url(../images/desktop/image-photography.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .txt-services {
+    margin-top: 60%;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .text {
+    margin: 6em 2em;
+  }
+
+  /*********** Gallery Section  *********/
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    border: 1px solid red;
+  }
+}
