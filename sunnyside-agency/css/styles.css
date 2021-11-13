@@ -4,7 +4,7 @@
 :root {
     /* Primary Colors */
     --soft-red: hsl(7, 99%, 70%);
-    --yellow: hsl(51, 100%, 49%)
+    --yellow: hsl(51, 100%, 49%);
     --dark-desaturated-cyan: hsl(167, 40%, 24%);
     --dark-blue: hsl(198, 62%, 26%);
     --dark-moderate-cyan: hsl(168, 34%, 41%);
@@ -37,6 +37,16 @@ img {
   max-width: 100%;
 }
 
+.links .btn {
+  background-color: white;
+  border-radius: 20px;
+  color: var(--very-dark-desaturated-blue);
+  display: inline-block;
+  padding: .5em 2em;
+}
+
+
+
 /*********** Typography  *********/
 h1,
 h2,
@@ -52,56 +62,110 @@ h1 {
   width: 80%;
 }
 
-
-/*********** Navbar Styles  *********/
-nav {
-  /* width: 100%; */
-  background-color: burlywood;
-  /* padding-left: 2em; */
-  /* padding-right: 2em; */
+a {
+  text-decoration: none;
 }
 
-.navbar {
+/*********** Navigation  *********/
+.nav {
+  background: transparent;
+  box-shadow: var(--light-shadow);
+  margin: 0 auto;
+  width: 90%;
+}
+.nav-header {
+  /* flex container for the mobile view  */
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.nav-toggle {
+  font-size: 1.5rem;
+  color: white;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
 }
 
 .logo {
-  display: inline-block;
-  text-decoration: none;
+  height: 40px;
+}
+.links a {
+  color: white;
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  display: block;
+  padding: 0.5rem 1rem;
 }
 
-.nav-links {
-  display: flex;
+
+.links {
+  cursor: pointer;
+  height: 0;
   list-style: none;
+  overflow: hidden;
+  padding: 0;
 }
-
-.nav-item a {
-  display: inline-block;
-  /* padding: 1em 1em; */
-  text-decoration: none;
-  color: var(--white);
-}
-
-.nav-item:hover {
+.show-links {
   background-color: white;
+  /* total height of the mobile menu */
+  height: 17rem;
+  padding: 2em;
+  text-align: center;
 }
 
-.nav-item:hover a {
-  color:var(--primary);
+.show-links a {
+  color: var(--dark-grayish-blue);
+  margin-bottom: 1em;
 }
 
-.logo img {
-  /* width: 175px; */
-  vertical-align: middle;
+@media screen and (min-width: 800px) {
+    .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    width: 100%;
+    }
+
+    .nav-header {
+    padding: 0;
+    }
+    .nav-toggle {
+    /* hides toggle on large screens */
+    display: none;
+    }
+    .links {
+    /* height: auto removes the 10rem height added to display the mobile menu */
+    height: auto;
+    display: flex;
+    align-items: center;
+    }
+    .links a {
+    /* spacing around and between the nav links */
+    padding: 0;
+    margin: 0 .5rem;
+    }
+ 
+
+    .show-links {
+      background-color: transparent;
+    }
 }
 
-/*********** Services Section  *********/
-.hero {
-    background-image: url(../images/mobile/image-header.jpg);
+/*********** Header Section  *********/
+.header {
+  background-image: url(../images/mobile/image-header.jpg);
     background-position: center bottom;
     background-size: cover;
+}
+
+.hero {
+    /* background-image: url(../images/mobile/image-header.jpg);
+    background-position: center bottom;
+    background-size: cover; */
 
     display: flex;
     flex-direction: column;
@@ -126,19 +190,14 @@ nav {
   background-image: url(../images/mobile/image-transform.jpg);
   background-position: center;
   background-size: cover;
-
   padding: 10em 0;
 }
 
 .block-2 { 
-  
-
-  
+ 
 }
 
 .block-3 { 
-  
-
   background-image: url(../images/mobile/image-stand-out.jpg);
   background-size: cover;
   background-position: center;
@@ -151,23 +210,19 @@ nav {
 }
 
 .block-5 { 
-  
-
   background-image: url(../images/mobile/image-graphic-design.jpg);
   background-position: center;
   background-size: cover;
 
-  padding: 10em 0;
+  padding: 10em 0 5em;
 }
 
 .block-6 { 
-  grid-area: 3 / 2 / 4 / 3;
-
   background-image: url(../images/mobile/image-photography.jpg);
   background-position: center;
   background-size: cover;
 
-  padding: 10em 0;
+  padding: 10em 0 5em;
 }
 
 .txt-services {
@@ -179,17 +234,6 @@ nav {
 .text {
   margin: 6em 2em;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 

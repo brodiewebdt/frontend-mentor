@@ -14,24 +14,29 @@
     </head>
 <body>
   <div class="container">
+    <header class="header">
 
+      <nav class="nav">       
+        <div class="nav-header">
+            <img class="logo" src="images/logo.svg" alt="">
+            <button class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>         
+        </div><!-- /.nav-header -->
+        <!-- links -->
+        <ul class="links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a id="btn-primary" class="btn btn-primary" href="#">Contact</a></li>
+        </ul>      
+      </nav><!-- /.nav -->
   
-    <nav class="navbar">
-        <a href="#" class="logo">
-          <img src="images/logo.svg" alt="">
-        </a>
-        <ul class="nav-links">
-          <li class="nav-item"><a href="#">About</a></li>
-          <li class="nav-item"><a href="#">Services</a></li>
-          <li class="nav-item"><a href="#">Projects</a></li>
-          <li class="nav-item"><a href="#">Contact</a></li>
-        </ul>       
-    </nav>
-
       <section class="hero">
           <h1>We are creatives</h1>
           <img src="images/icon-arrow-down.svg" alt="arrow down icon">
       </section><!-- /.hero -->
+    </header><!-- /.header -->
 
       <main>
         <section class="services">
@@ -44,7 +49,7 @@
                 <h2>Transform your brand</h2>
                 <p>We are a full-service creative agency specializing in helping brands grow fast. 
                 Engage your clients through compelling visuals that do most of the marketing for you.</p>
-                <a href="#">Learn more</a>
+                <a class="services-link" href="#">Learn more</a>
             </div><!-- /.text -->
         </div><!-- /.block-2 -->
         
@@ -55,7 +60,7 @@
             <div class="text">
                 <h2>Stand out to the right audience</h2>
                 <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
-                <a href="#">Learn more</a>
+                <a class="services-link" href="#">Learn more</a>
             </div><!-- /.text -->
         </div><!-- /.block-4 -->
         <div class="block-5">
@@ -137,5 +142,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">David Turner</a>.
   </div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
