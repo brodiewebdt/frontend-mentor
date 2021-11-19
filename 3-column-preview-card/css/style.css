@@ -1,0 +1,108 @@
+
+
+/************ General Styles  ***************/
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+    --white: #fff;
+    box-sizing: border-box;
+}
+ 
+ *, *::before, *, ::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+ 
+ body {
+     color: var(--white);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+}
+ 
+ .container {
+    margin: 3em auto;
+    width: 375px; 
+    border-radius: 8px;
+    border: 1px solid red;
+}
+
+img {
+    margin-bottom: 2.3em;
+}
+
+.attribution {
+    color: var(--very-dark-cyan); 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/************ Typography  ***************/
+h2 {
+    color: var(--very-light-gray);
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.67rem;
+    margin-bottom: 0.6em; 
+    text-transform: uppercase; 
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 2.5em;
+}
+
+.btn-primary {
+    background-color: var(--very-light-gray);
+    border-radius: 100px;
+    color: var(--very-dark-cyan);
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: transparent;
+    border: 1px solid var(--very-light-gray);
+    color: var(--white);
+}
+
+/************ Section Styles  ***************/
+section {
+    padding: 3em;
+}
+.car-type-1 {
+    background-color: var(--bright-orange);
+}
+
+.btn-sedan {
+    color: var(--bright-orange);
+}
+
+.car-type-2 {
+    background-color: var(--dark-cyan);
+}
+.btn-suv {
+    color: var(--dark-cyan);
+}
+
+.car-type-3 {
+    background-color: var(--very-dark-cyan);
+}
+.btn-luxury {
+    color: var(--very-dark-cyan);
+}
+
+/************ Media Queries  ***************/
+@media (min-width:750px) {
+    .container {
+        display: flex;
+        width: 90%;
+    }
+
+}
