@@ -1,0 +1,383 @@
+ 
+
+/*********** General Styles  *********/
+html {
+    box-sizing: border-box;
+    --primary: hsl(192, 37%,48%);
+    --primary-alpha: hsl(192, 37%,48%, 0.9);
+    --primary-hover-color: hsl(192, 54%,64%);
+    --secondary: hsl(268, 34%, 53%);
+    --secondary-hover-color: hsl(268,100%, 86%);
+    --text-dark: hsl(240, 21%,20%);
+    --text-light: hsl(240, 10%, 57%); 
+    --white: #fff;
+
+    --blue: blue;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+  }
+
+  .container {
+    margin: 0 auto;
+    width: 375px;
+  }
+
+  
+  /*********** Button Styles  *********/
+  a.btn {
+    border-radius: 50px;
+    color: var(--white);
+    cursor: pointer;
+    font-weight: 900;
+    padding: 1em 2.5em;
+    text-decoration: none;
+  }
+
+  .btn-primary {
+    background-color: var(--primary);
+    margin-bottom: 1em;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--primary-hover-color)
+  }
+
+  .btn-primary span {
+    color: #8FE3F9;
+  }
+
+  .btn-secondary {
+    background-color: var(--secondary);
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--secondary-hover-color)
+  }
+
+  /*********** Typography Styles  *********/
+  h1 {
+    font-size: 2.5rem;
+    line-height: 44px;
+    margin-bottom: 1.5rem;
+  }
+
+  
+
+  p {
+    font-weight: 500;
+    line-height: 26px;
+  }
+
+  /*********** Header Styles  *********/
+  header {
+    text-align: center;
+    margin-bottom: 3.375em;
+    padding-top: 3em;
+  }
+
+  /*********** CTA Section Styles  *********/
+ .cta {
+   text-align: center;
+ }
+
+ .mobile-img {
+   margin-bottom: 3em;
+   max-width: 100%;
+ }
+
+p {
+  margin: 0 0.6em 2em;
+}
+
+ .cta-btn-holder {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+ }
+
+  .mobile-img-holder {
+    margin-bottom: 4em;
+  }
+  
+  .desktop-content-holder {
+    display: none;
+  }
+
+  /*********** Pagination Styles  *********/
+  .pagination {
+    text-align: center;
+  }
+
+  .vertical-line {
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .pagination-1 {
+    margin-bottom: 4em;
+  }
+  
+  .pagination span {
+    background-color: var(--white);
+    display: inline-block;
+    border: 1px solid var(--text-light);
+    border: 1px solid #d8d8d8;
+    border-radius: 50%;
+    color: var(--text-light);
+    font-weight: 900;
+    padding: 15px  16px;
+  }
+
+  hr {
+    background-color: #d8d8d8;
+    border: none;
+    display: inline-block;
+  }
+
+  /*********** Product Image Styles  *********/
+  .product-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 4em;
+  }
+
+  .product-images img {
+    border-radius: 5px;
+    margin: 0.75em;
+    width: 40%;
+  }
+
+  .product-info {
+    margin: 0 1.5em;
+    text-align: center;
+  }
+
+  .product-pre-head {
+    color: var(--primary);
+    display: inline-block;
+    font-weight: 900;
+    letter-spacing: 4px;
+    line-height: 26px;
+    margin-bottom: 1.5em;
+    text-transform: uppercase; 
+  }
+
+  h2 {
+    font-size: 2rem;
+    line-height: 36px;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    margin-bottom: 4em;
+  }
+
+  /*********** Footer Styles  *********/
+  footer {
+    background: linear-gradient(
+      var(--primary-alpha), 
+      var(--primary-alpha)
+    ),  url(../assets/mobile/image-footer.jpg);
+    background-size: cover;
+    color: var(--white);
+    margin-top: -2em;
+    padding: 5.75em 2em 4.5em 1em;
+    text-align: center;
+  }
+
+  .experience h2 {
+    font-size: 2rem;
+    line-height: 36px;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-blurb p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-btn {
+    background-color: var(--secondary);
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  .footer-btn span {
+    color: #d9b8ff;
+  }
+
+  /*********** Attribution Styles  *********/
+  .attribution { 
+    font-size: 11px; text-align: center; 
+  }
+  .attribution a { 
+    color: hsl(228, 45%, 44%); 
+  }
+
+  /*********** Media Queries  *********/
+
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+  
+   /*********** CTA Section Styles  *********/
+  h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 48px;
+    margin: auto 2em 1.5rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 44px;
+    margin: auto 4rem 1.5rem;
+  }
+
+  p {
+    margin: 0 2em 2em;
+  }
+
+  .product-pre-head {
+    margin-bottom: 1em;
+  }
+
+  .product-text {
+    margin-bottom: 4em;
+  }
+
+  .mobile-text {
+    margin: 0 10em 2em;
+  }
+
+  .cta-btn-holder {
+    flex-direction: row;
+  }
+
+  .btn-primary {
+    margin: 0;
+  }
+
+  .btn-secondary {
+    margin-left: 1em;
+  }
+
+   /*********** Product Image Styles  *********/
+  .product-images img {
+    width: 20%;
+  }
+
+  .product-images {
+    margin-bottom: 3em;
+  }
+
+  .product-info {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .product-heading {
+    margin: 0 2em;
+  }
+
+  .product-text {
+    margin: 0 auto 4rem;
+
+  }
+
+  /*********** Footer Styles  *********/
+  .experience h2 {
+    margin: 0 auto 2rem;
+    width: 40%;
+  }
+
+  .footer-blurb {
+    margin: 0 auto 2.5rem;
+    width: 90%;
+  }
+}
+
+@media (min-width: 1000px) {
+  /*********** General Styles  *********/
+  .container {
+    width: 1000px;
+  }
+
+  /*********** CTA Section Styles  *********/
+    .mobile-img-holder {
+        /* border: 2px solid green; */
+        display: none;
+    }
+    
+    .desktop-content-holder {
+        /* border: 2px solid red; */
+        display: flex;
+    }
+    
+    .desktop-image {
+      width: 33%;
+    }
+
+    .desktop-image img {
+      max-width: 100%;
+    }
+
+    .cta-content {
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0 auto 1rem;
+      width: 60%;
+    }
+
+    p {
+      width: 80%;
+    }
+
+    a.btn {
+      padding: 1em 1.5em;
+    }
+
+    /*********** Footer Styles  *********/
+    footer {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    footer div {
+      display: flex;
+      justify-content: center;
+      flex-basis: 33%;
+    }
+
+    .experience h2 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    .footer-blurb  {
+      margin: 0;
+    }
+
+    p.footer-info {
+      margin: 0;
+    }
+   
+}
