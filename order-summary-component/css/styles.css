@@ -1,7 +1,7 @@
 
 :root {
     /* Primary Colors */
-    --pale-blue: hsl(225, 100%, 94%);
+    --pale-blue: hsl(228, 100%, 94%);
     --bright-blue: hsl(245, 75%, 52%);
     /* Neutral Colors */
     --very-pale-blue: hsl(225, 100%, 98%);
@@ -15,6 +15,136 @@
     box-sizing: border-box;
 }
 
+/*************** General Layout  ******************/
+body {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--pale-blue);
+    background-image: url(../images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1rem;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+.btn {
+    background-color: var(--bright-blue);
+    border-radius: 10px;
+    box-shadow: 0 20px 20px hsla(245, 75%, 52%, .2);
+    color: white;
+    display: block;
+    font-weight: 900;
+    margin-bottom: 1.5em;
+    padding: 1em;
+    text-decoration: none;
+    width: 100%;
+}
+
+/*************** Typography  ******************/
+h1, h2, p {
+    margin: 0;
+}
+h1 {
+    font-size: 1.375rem;
+    font-weight: 900;
+    margin: 2rem 0 1rem;
+}
+
+h2 {
+    font-size: .875rem;
+    font-weight: 900;
+    margin-bottom: .25em;
+}
+
+/*************** Card Styles  ******************/
+.card {background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px hsla(245, 75%, 52%, .15);
+    margin: 0 auto;
+    overflow: hidden;    
+    text-align: center;
+    width: 90%;
+}
+
+.card-content,
+.card-footer {
+    padding: 0 1.5em;
+}
+
+.pricing {
+    background-color: var(--very-pale-blue);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 1.25em;
+    margin: 1.5em 0;
+    padding: 1em;
+}
+
+.price-link {
+    color: var(--bright-blue);
+    font-size: .8125rem;
+    font-weight: 900;
+    margin-left: auto;
+}
+
+.cancel-link {
+    color: var(--desaturated-blue);
+    display: inline-block;
+    font-weight: 900;
+    margin-bottom: 2em;
+    text-decoration: none;
+}
+
+/*************** Attribution Styles  ******************/
+.attribution {
+    font-size: 11px;
+    margin-top: 2em;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+/*************** Media Queries  ******************/
+@media (min-width: 475px) {
+    body {
+        background-image: url(../images/pattern-background-desktop.svg);
+    }
+
+    .btn {
+        margin-bottom: 2em;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .card {
+        width: 450px;
+    }
+
+    .card-content,
+    .card-footer {
+        padding: 0 3em;
+    }
+
+    .pricing {
+        margin-bottom: 2em;
+    }
+}
 
 
 
@@ -25,9 +155,3 @@
 
 
 
-
-
-
-
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
