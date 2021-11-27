@@ -25,8 +25,8 @@
             <nav class="nav">       
                 <div class="nav-header">
                     <img class="logo" src="images/logo.svg" alt="easybank logo">
-                    <button class="nav-toggle">
-                        <i class="fas fa-bars"></i>
+                    <button class="nav-toggle" aria-label="Open the menu">
+                        <i class="fas fa-bars" aria-hidden="true"></i>
                     </button>         
                 </div><!-- /.nav-header -->
                 <!-- links -->
@@ -44,23 +44,24 @@
               </nav><!-- /.nav -->
         </div><!-- /.container -->
     </header><!-- /.header -->
-    
-    <section class="hero">
-        <div class="container">
-            <div class="hero-img">
-                <img src="images/image-mockups.png" alt="four cell phones with app screens on them">
-            </div><!-- /.hero-img -->
-            <div class="hero-text">
-                <h1 class="page-title">Next generation digital banking</h1>
-            <p class="subtitle">Take your financial life online. Your Easybank account will be a one-stop-shop 
-                for spending, saving, budgeting, investing, and much more.</p>
-            <button class="btn btn-primary">Request Invite</button>
-            </div><!-- /.hero-text --> 
-        </div><!-- /.container -->       
-    </section><!-- /.hero -->
-
-
     <main class="main" role="main">
+
+        <section class="hero">
+            <div class="container">
+                <div class="hero-img">
+                    <img src="images/image-mockups.png" alt="four cell phones with app screens on them">
+                </div><!-- /.hero-img -->
+                <div class="hero-text">
+                    <h1 class="page-title">Next generation digital banking</h1>
+                <p class="subtitle">Take your financial life online. Your Easybank account will be a one-stop-shop 
+                    for spending, saving, budgeting, investing, and much more.</p>
+                <button class="btn btn-primary">Request Invite</button>
+                </div><!-- /.hero-text --> 
+            </div><!-- /.container -->       
+        </section><!-- /.hero -->
+
+
+    
         <section class="features">
             <div class="container">
                 <header class="features-header">
@@ -111,7 +112,7 @@
                         </div><!-- /.blog-img -->
                         <div class="blog-text">
                             <span class="post-author">By Claire Robinson</span>
-                            <h4 class="post-title">Receive money in any currency with no fees</h4> 
+                            <h3 class="post-title">Receive money in any currency with no fees</h3> 
                             <p class="post-content">The world is getting smaller and we’re becoming more mobile. So why should you be 
                                 forced to only receive money in a single ...</p>
                         </div><!-- /.blog-text -->
@@ -122,7 +123,7 @@
                         </div><!-- /.blog-img -->
                         <div class="blog-text">
                             <span class="post-author">By Wilson Hutton</span>
-                            <h4 class="post-title">Treat yourself without worrying about money</h4> 
+                            <h3 class="post-title">Treat yourself without worrying about money</h3> 
                             <p class="post-content">Our simple budgeting feature allows you to separate out your spending and set 
                                 realistic limits each month. That means you ...</p>
                         </div><!-- /.blog-text -->
@@ -133,7 +134,7 @@
                         </div><!-- /.blog-img -->
                         <div class="blog-text">
                             <span class="post-author">By Wilson Hutton</span>
-                            <h4 class="post-title">Take your Easybank card wherever you go</h4> 
+                            <h3 class="post-title">Take your Easybank card wherever you go</h3> 
                             <p class="post-content">We want you to enjoy your travels. This is why we don’t charge any fees on purchases 
                                 while you’re abroad. We’ll even show you ...</p>
                         </div><!-- /.blog-text -->
@@ -144,7 +145,7 @@
                         </div><!-- /.blog-img -->
                         <div class="blog-text">
                             <span class="post-author">By Claire Robinson</span>
-                            <h4 class="post-title">Our invite-only Beta accounts are now live!</h4> 
+                            <h3 class="post-title">Our invite-only Beta accounts are now live!</h3> 
                             <p class="post-content">After a lot of hard work by the whole team, we’re excited to launch our closed beta. 
                                 It’s easy to request an invite through the site ...</p>
                         </div><!-- /.blog-text -->
@@ -164,40 +165,42 @@
                 </div><!-- /.footer-logo -->
                 <div class="social">
                 <ul>
-                    <li class="social-links"><a href="#" class="fab fa-facebook-square social-icon"></a></li><!-- /.social-links -->
-                    <li class="social-links"><a href="#" class="fab fa-youtube social-icon"></a></li><!-- /.social-links -->
-                    <li class="social-links"><a href="#" class="fab fa-twitter social-icon"></a></li><!-- /.social-links -->
-                    <li class="social-links"><a href="#" class="fab fa-pinterest social-icon"></a></li><!-- /.social-links -->
-                    <li class="social-links"><a href="#" class="fab fa-instagram social-icon"></a></li><!-- /.social-links -->
+                    <li class="social-links"><a href="#" class="fab fa-facebook-square social-icon" aria-label="facebook"></a></li><!-- /.social-links -->
+                    <li class="social-links"><a href="#" class="fab fa-youtube social-icon" aria-label="youtube"></a></li><!-- /.social-links -->
+                    <li class="social-links"><a href="#" class="fab fa-twitter social-icon" aria-label="twitter"></a></li><!-- /.social-links -->
+                    <li class="social-links"><a href="#" class="fab fa-pinterest social-icon" aria-label="pinterest"></a></li><!-- /.social-links -->
+                    <li class="social-links"><a href="#" class="fab fa-instagram social-icon" aria-label="instagram"></a></li><!-- /.social-links -->
                 </ul>
                 </div><!-- /.social -->
             </div><!-- /.link-block -->
             <div class="link-block">
-                <ul class="footer-links footer-links-1">
+                <ul>
                 <li class="link-item"><a href="#">About Us</a></li><!-- /.link-item -->
                 <li class="link-item"><a href="#">Jobs</a></li><!-- /.link-item -->
                 <li class="link-item"><a href="#">Blog</a></li><!-- /.link-item -->
                 </ul>
             </div><!-- /.link-block -->
             <div class="link-block">
-                <ul class="footer-links footer-links-2">
+                <ul>
                 <li class="link-item"><a href="#">Careers</a></li><!-- /.link-item -->
                 <li class="link-item"><a href="#">Support</a></li><!-- /.link-item -->
                 <li class="link-item"><a href="#">Privacy Policy</a></li><!-- /.link-item -->           
                 </ul>
             </div><!-- /.link-block -->
             <div class="link-block">
-                <button class="btn btn-primary">Request Invite</button>
+                <div class="footer-btn">
+                    <button class="btn btn-primary">Request Invite</button>
+                </div><!-- /.footer-btn -->
                 <p class="copyright">&copy; Easybank, All Rights Reserved</p> 
             </div><!-- /.link-block -->
             </div><!-- /.footer-links -->
         </div><!-- /.container -->
     </footer><!-- /.footer -->
 
-    <div class="attribution">
+    <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/brodiewebdt/frontend-mentor">David Turner</a>.
-    </div>
+    </div> -->
 
     <script src="js/script.js"></script>
 </body>
