@@ -176,15 +176,29 @@ footer a {
     display: block;
     font-size: 1rem;
     letter-spacing: 2px;
+    /* position: relative; */
     text-decoration: none;
     text-transform: capitalize;
+
+    border: 1px solid red;
   }
 
+
   .links a:hover,
-  .links a:focus {
-    
+  .links a:focus {  
     color: var(--dark-blue);
     /* padding-bottom: 1.5em; */
+  }
+
+  .links a:hover .border-div {
+    position: absolute;
+    top: 5em;
+    background-color: var(--lime-green);
+    height: 4px;
+    /* margin-left: .2em; */
+    /* transform: translateY(1em); */    
+    width: 3.5em;
+    /* width: 4%; */
   }
   
   .links {
