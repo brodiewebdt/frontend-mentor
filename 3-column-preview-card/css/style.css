@@ -27,7 +27,6 @@
     margin: 3em auto;
     width: 375px; 
     border-radius: 8px;
-    border: 1px solid red;
 }
 
 img {
@@ -44,6 +43,7 @@ img {
 }
 
 /************ Typography  ***************/
+h1,
 h2 {
     color: var(--very-light-gray);
     font-family: 'Big Shoulders Display', cursive;
