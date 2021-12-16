@@ -60,6 +60,7 @@ body {
     text-align: left;
 }
 
+.client-name h1,
 .client-name h2 {
     font-size: 1rem;
     font-weight: 500;
@@ -95,7 +96,8 @@ body {
     color: var(--very-dark-grayish-blue);
 }
 
-.quote h3 {
+.quote h2,
+.qoute h3 {
     font-size: 1.5rem;
     font-weight: 500;
     letter-spacing: 1px;
