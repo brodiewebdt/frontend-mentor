@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(
+        135deg,
+        hsl(0deg, 0%, 100%) 0%,
+        hsl(0deg, 100%, 98%) 100%
+    );
+    color: hsl(0deg, 36%, 70%);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1rem;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+}
+
+img,
+picture {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.error {
+    color: hsl(0deg, 93%, 68%);
+}
+
+.error-icon {
+    display: none;
+    position: absolute;
+    top: 25%;
+    right: 27%;
+    height: 24px;
+    width: 24px;
+}
+
+.error-icon.error {
+    display: block;
+}
+
+small {
+    display: none;
+    position: absolute;
+    font-size: inherit;
+    margin: 0.5rem 1.5rem 0;
+    text-align: left;
+}
+
+small.error {
+    display: block;
+}
+
+/***********  Card Styles *************/
+.preview__card {
+    display: grid;
+    grid-template-columns: 2rem 1fr 2rem;
+    max-height: 50rem;
+    max-width: 90rem;
+}
+@media (min-width: 48em) {
+    .preview__card {
+        grid-template-columns: 2.5rem 1fr 1fr 2.5rem;
+        grid-template-rows: 5rem 45rem;
+        background-image: url(../images/bg-pattern-desktop.svg);
+    }
+}
+@media (min-width: 80em) {
+    .preview__card {
+        grid-template-columns: 10rem 1fr 28rem 10rem;
+        grid-template-rows: 5rem 45rem;
+    }
+}
+
+.card__header {
+    grid-column: 2/3;
+    padding-block: 2rem;
+}
+@media (min-width: 48em) {
+    .card__header {
+        grid-column: 2/3;
+        grid-row: 1;
+    }
+}
+@media (min-width: 67.5em) {
+    .card__header {
+        padding-top: 4.5rem;
+    }
+}
+
+.logo {
+    height: auto;
+    width: 100px;
+}
+@media (min-width: 67.5em) {
+    .logo {
+        width: 158px;
+    }
+}
+
+.card__image {
+    grid-column: 1/4;
+}
+@media (min-width: 48em) {
+    .card__image {
+        grid-column: 3/5;
+        grid-row: 1/2;
+    }
+}
+
+.card__body {
+    grid-column: 2/3;
+}
+@media (min-width: 48em) {
+    .card__body {
+        grid-column: 2/3;
+        grid-row: 2;
+        padding-right: 3rem;
+        text-align: left;
+    }
+}
+@media (min-width: 80em) {
+    .card__body {
+        padding-right: 8rem;
+    }
+}
+.card__body-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 10.83px;
+    line-height: 1.05;
+    margin: 4rem 0 1rem;
+    text-transform: uppercase;
+}
+@media (min-width: 48em) {
+    .card__body-title {
+        margin-top: 2rem;
+    }
+}
+@media (min-width: 67.5em) {
+    .card__body-title {
+        font-size: 4rem;
+        margin-top: 8rem;
+    }
+}
+@media (min-width: 80em) {
+    .card__body-title {
+        margin-top: 10rem;
+    }
+}
+.card__body span {
+    color: hsl(0deg, 6%, 24%);
+    font-weight: 600;
+}
+.card__body-description {
+    font-size: 0.875rem;
+    line-height: 1.57;
+    margin-bottom: 2rem;
+}
+@media (min-width: 67.5em) {
+    .card__body-description {
+        font-size: 1rem;
+    }
+}
+.card__body-form {
+    position: relative;
+}
+.card__body-form input {
+    border: 1px solid hsl(0deg, 36%, 70%);
+    border-radius: 50px;
+    padding: 1rem 0 1rem 1.5rem;
+    width: 100%;
+}
+.card__body-form input::placeholder {
+    color: hsl(0deg, 36%, 70%);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 0.875rem;
+}
+.card__body-form input.error {
+    border-color: hsl(0deg, 93%, 68%);
+}
+.card__body-form button {
+    position: absolute;
+    right: 0;
+    background: linear-gradient(
+        135deg,
+        hsl(0deg, 80%, 86%) 0%,
+        hsl(0deg, 74%, 74%) 100%
+    );
+    border: none;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 0.9125rem 1.75rem;
+}
+@media (min-width: 67.5em) {
+    .card__body-form input {
+        padding: 1.2rem 0 1.2rem 1.5rem;
+    }
+    .card__body-form button {
+        padding: 1.1rem 2.75rem;
+    }
+}
+@media (min-width: 37.5em) and (max-width: 47.9em) {
+    .card__body {
+        margin-inline: auto;
+        width: 25rem;
+    }
+}
+
+/***********  Attribution Styles *************/
+.attribution {
+    font-size: 12px;
+    padding-block: 6rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(0deg, 6%, 24%);
+} /*# sourceMappingURL=styles.css.map */

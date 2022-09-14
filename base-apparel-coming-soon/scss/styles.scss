@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+// Primary Colors
+$color-desaturated-red: hsl(0, 36%, 70%);
+$color-soft-red: hsl(0, 93%, 68%);
+// NeutralColors
+$dark-grayish-red: hsl(0, 6%, 24%);
+// Gradients
+$gradient-light: (135deg, hsl(0, 0%, 100%) 0%, hsl(0, 100%, 98%) 100%);
+$gradient-dark: (135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient($gradient-light);
+    color: $color-desaturated-red;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1rem;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+}
+
+img,
+picture {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.error {
+    color: $color-soft-red;
+}
+
+.error-icon {
+    display: none;
+    position: absolute;
+    top: 25%;
+    right: 27%;
+    height: 24px;
+    width: 24px;
+}
+
+.error-icon.error {
+    display: block;
+}
+
+small {
+    display: none;
+    position: absolute;
+    font-size: inherit;
+    margin: 0.5rem 1.5rem 0;
+    text-align: left;
+}
+
+small.error {
+    display: block;
+}
+
+/***********  Card Styles *************/
+.preview__card {
+    display: grid;
+    grid-template-columns: 2rem 1fr 2rem;
+    max-height: 50rem;
+    max-width: 90rem;
+
+    @media (min-width: 48em) {
+        grid-template-columns: 2.5rem 1fr 1fr 2.5rem;
+        grid-template-rows: 5rem 45rem;
+        background-image: url(../images/bg-pattern-desktop.svg);
+        // background-size: cover;
+    }
+
+    @media (min-width: 80em) {
+        grid-template-columns: 10rem 1fr 28rem 10rem;
+        grid-template-rows: 5rem 45rem;
+    }
+}
+
+.card__header {
+    grid-column: 2 / 3;
+    padding-block: 2rem;
+
+    @media (min-width: 48em) {
+        grid-column: 2 / 3;
+        grid-row: 1;
+    }
+
+    @media (min-width: 67.5em) {
+        padding-top: 4.5rem;
+    }
+}
+
+.logo {
+    height: auto;
+    width: 100px;
+
+    @media (min-width: 67.5em) {
+        width: 158px;
+    }
+}
+
+.card__image {
+    grid-column: 1 / 4;
+
+    @media (min-width: 48em) {
+        grid-column: 3 / 5;
+        grid-row: 1 / 2;
+    }
+}
+
+.card__body {
+    grid-column: 2 / 3;
+
+    @media (min-width: 48em) {
+        grid-column: 2 / 3;
+        grid-row: 2;
+        padding-right: 3rem;
+        text-align: left;
+    }
+
+    @media (min-width: 80em) {
+        padding-right: 8rem;
+    }
+
+    &-title {
+        font-size: 2.5rem;
+        font-weight: 300;
+        letter-spacing: 10.83px;
+        line-height: 1.05;
+        margin: 4rem 0 1rem;
+        text-transform: uppercase;
+
+        @media (min-width: 48em) {
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 67.5em) {
+            font-size: 4rem;
+            margin-top: 8rem;
+        }
+
+        @media (min-width: 80em) {
+            margin-top: 10rem;
+        }
+    }
+    span {
+        color: $dark-grayish-red;
+        font-weight: 600;
+    }
+
+    &-description {
+        font-size: 0.875rem;
+        line-height: 1.57;
+        margin-bottom: 2rem;
+
+        @media (min-width: 67.5em) {
+            font-size: 1rem;
+        }
+    }
+
+    &-form {
+        position: relative;
+
+        input {
+            border: 1px solid $color-desaturated-red;
+            border-radius: 50px;
+            padding: 1rem 0 1rem 1.5rem;
+            width: 100%;
+
+            &::placeholder {
+                color: $color-desaturated-red;
+                font-family: "Josefin Sans", sans-serif;
+                font-size: 0.875rem;
+            }
+
+            &.error {
+                border-color: $color-soft-red;
+            }
+        }
+
+        button {
+            position: absolute;
+            right: 0;
+            background: linear-gradient($gradient-dark);
+            border: none;
+            border-radius: 50px;
+            display: inline-block;
+            padding: 0.9125rem 1.75rem;
+        }
+
+        @media (min-width: 67.5em) {
+            input {
+                padding: 1.2rem 0 1.2rem 1.5rem;
+            }
+
+            button {
+                padding: 1.1rem 2.75rem;
+            }
+        }
+    }
+
+    @media (min-width: 37.5em) and (max-width: 47.9em) {
+        margin-inline: auto;
+        width: 25rem;
+    }
+}
+
+/***********  Attribution Styles *************/
+.attribution {
+    font-size: 12px;
+    padding-block: 6rem;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(0, 6%, 24%);
+}

@@ -1,57 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <title>Frontend Mentor | Base Apparel coming soon page</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="css/style.css">
-  </style>
-</head>
-<body>
-  <main>
-    <div class="container">
-  
-      <div class="left">
-        <div class="inner-container">
-  
-          <img src="images/logo.svg" alt="logo" class="logo">
-  
-          <img src="images/hero-mobile.jpg" alt="a woman sitting in front of a plant" class="bg-mobile">
-  
-          <h1><span>We're</span><br>coming<br>soon</h1>
-  
-          <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
-  
-          <form id="form">
-            <input id="email" type="email" placeholder="Email Address" />
-              <img class="error-icon" src="images/icon-error.svg" alt="error icon" />
-              <button>
-                <img src="images/icon-arrow.svg" alt="arrow icon" />
-              </button>
-              <small>Please provide a valid email</small>
-          </form><!-- /#form -->
-        </div><!-- /.inner-container -->
-      </div><!-- /.left -->
-  
-      <div class="right bg-image"></div><!-- /.right bg-image -->
-  
-    </div><!-- /.container -->
-  </main>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
 
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">David Turner</a>.
-    </p>
-  </footer>
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
 
-  <script src="js/script.js"></script>
-</body>
+        <title>Frontend Mentor | Base Apparel coming soon page</title>
+        <link rel="stylesheet" href="dist/styles.css" />
+    </head>
+    <body>
+        <main>
+            <div class="preview__card">
+                <div class="card__header">
+                    <img
+                        class="logo"
+                        src="images/logo.svg"
+                        alt="Base Apparel"
+                    />
+                </div>
+                <!-- /.card__header -->
+                <div class="card__image">
+                    <picture>
+                        <source
+                            srcset="images/hero-desktop.jpg"
+                            media="(min-width: 768px)"
+                        />
+                        <img
+                            src="images/hero-mobile.jpg"
+                            alt="brown haired woman sitting with a plant in the background"
+                        />
+                    </picture>
+                </div>
+                <!-- /.card__image -->
+                <div class="card__body">
+                    <h1 class="card__body-title">
+                        We're<span
+                            ><br />
+                            coming<br />soon</span
+                        >
+                    </h1>
+                    <p class="card__body-description">
+                        Hello fellow shoppers! We're currently building our new
+                        fashion store. Add your email below to stay up-to-date
+                        with announcements and our launch deals.
+                    </p>
+
+                    <label for="email" class="sr-only">Email Address</label>
+                    <form class="card__body-form">
+                        <input
+                            class="err-test"
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Email Address"
+                        />
+                        <img
+                            class="error-icon err-test"
+                            src="./images/icon-error.svg"
+                            alt=""
+                            aria-hidden="true"
+                        />
+                        <label
+                            for="submit"
+                            class="sr-only"
+                            aria-label="Submit Email Address"
+                        ></label>
+                        <button
+                            class="submit"
+                            type="submit"
+                            id="submit"
+                            value=""
+                            aria-label="Submit"
+                        >
+                            <img src="images/icon-arrow.svg" alt="" />
+                        </button>
+                        <small class="err-test">Please provide a valid email</small>
+                    </form>
+                </div>
+                <!-- /.card__body -->
+            </div>
+            <!-- /.preview__card -->
+        </main>
+
+        <footer>
+            <p class="attribution">
+                Challenge by
+                <a
+                    href="https://www.frontendmentor.io?ref=challenge"
+                    target="_blank"
+                    >Frontend Mentor</a
+                >. Coded by
+                <a href="https://github.com/brodiewebdt">David Turner</a>.
+            </p>
+        </footer>
+        <script src="js/script.js"></script>
+    </body>
 </html>
